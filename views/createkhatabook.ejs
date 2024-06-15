@@ -1,0 +1,24 @@
+<%- include('./partials/header') %>
+<div class="main w-full px-12 mt-20">
+  <h1 class="font-medium text-xl">Create New Hisaab</h1>
+  <form action="/create" method="post" class="flex flex-col">
+    <input
+      type="text"
+      name="title"
+      placeholder="Shopping Hisaab, Ghar ka kharach"
+      class="bg-zinc-100 outline-none p-1.5 px-3 w-1/4 rounded-md mt-4"
+    />
+    <textarea
+      name="description"
+      placeholder="Daal, Aata, Chinni"
+      class="bg-zinc-100 p-1.5 px-3 w-1/3 rounded-md outline-none resize-none h-[37vh] mt-4"
+    ></textarea>
+    <input
+      type="submit"
+      value="Create new Hisaab"
+      class="bg-blue-500 tracking-tight p-1.5 font-medium px-3 rounded-md mt-4 cursor-pointer text-white w-fit"
+    />
+  </form>
+</div>
+
+<%- include('./partials/footer') %>

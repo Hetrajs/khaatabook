@@ -1,0 +1,13 @@
+<%- include('./partials/header') %>
+
+<div class="main w-full px-12 mt-20">
+  <h3 class="font-semibold">
+    hisaab of <span class="text-[#5db1ff] font-bold"><%= filename %></span> date
+  </h3>
+  <div class="both mt-4">
+    <h1 class="font-semibold">Title: &NonBreakingSpace; <span class="text-zinc-700"><%= title %></span></h1>
+    <h1 class="font-semibold">Desc : &NonBreakingSpace; <span class="text-zinc-700"><%= description %></span></h1>
+  </div>
+  <a href="/edit/<%= filename %>" class="mt-10 inline-block text-zinc-500"
+    >Edit hisaab</a>
+</div>

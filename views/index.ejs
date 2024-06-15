@@ -1,0 +1,42 @@
+<%- include('./partials/header') %>
+
+<div class="main w-full px-12 mt-20">
+  <h1 class="font-medium tracking-wide">All Hisaab Kitaab</h1>
+
+  <% files.forEach((file)=>{ let fileNameWithoutExt = file.replace(".txt", "");
+  %>
+  <span
+    class="w-1/4 bg-blue-500 text-white p-1.5 flex justify-between px-5 rounded-md mt-3 inline-block"
+  >
+    <div class="first flex items-center gap-5">
+      <h1><%= fileNameWithoutExt %></h1>
+      <a href="/show/<%= fileNameWithoutExt %>">
+        <span
+          class="bg-white flex justify-center items-center size-5 rounded-full"
+        >
+          <i
+            class="ri-arrow-right-line hover:translate-x-1 duration-300 text-blue-500 text-sm"
+          ></i>
+        </span>
+      </a>
+    </div>
+
+    <div class="second flex items-center gap-3">
+      <a href="/edit/<%= fileNameWithoutExt %>">
+        <i class="ri-pencil-line"></i>
+      </a>
+      <a href="/delete/<%= fileNameWithoutExt %>">
+        <span
+          class="bg-white flex justify-center items-center size-5 rounded-full"
+        >
+          <i
+            class="ri-delete-bin-6-line text-red-500 text-sm cursor-pointer"
+          ></i>
+        </span>
+      </a>
+    </div>
+  </span>
+  <% }) %>
+</div>
+
+<%- include('./partials/footer') %>

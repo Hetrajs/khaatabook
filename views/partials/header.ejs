@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>Khatabook</title>
+  </head>
+  <body>
+    <nav class="w-full bg-white flex justify-between items-center px-12 h-20">
+      <a href="/"><h1 class="font-bold">Khataabook</h1></a>
+      <div class="duel font-semibold flex gap-5">
+        <a href="/">Home</a>|
+        <a id="createHisaabLink" href="/create">Create New Hisaab</a>
+      </div>
+    </nav>
+    <script>
+      if (window.location.pathname === '/create') {
+        document.getElementById('createHisaabLink').style.display = 'none';
+      }
+    </script>
+  </body>
+</html>
